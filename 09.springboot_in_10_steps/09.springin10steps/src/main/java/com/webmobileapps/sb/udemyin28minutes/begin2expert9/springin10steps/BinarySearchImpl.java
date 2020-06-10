@@ -1,11 +1,15 @@
 package com.webmobileapps.sb.udemyin28minutes.begin2expert9.springin10steps;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class BinarySearchImpl {
 	
 	//impl soring logic
 	//impl saerching login
 	//impl return the result
-	
+	@Autowired
 	private SortAlgorithm sortAlgorithm;
 	
 	
