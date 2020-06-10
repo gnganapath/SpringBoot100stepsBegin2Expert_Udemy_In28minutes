@@ -13,20 +13,26 @@ public class BinarySearchImpl {
 	private SortAlgorithm sortAlgorithm;
 	
 	
-	public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
-		super();
-		// TODO Auto-generated constructor stub
-		this.sortAlgorithm = sortAlgorithm;
-	}
-
+	//	public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
+	//		super();
+	//		// TODO Auto-generated constructor stub
+	//		this.sortAlgorithm = sortAlgorithm;
+	//	}
+	
+	//	public void setSortAlgorithm(SortAlgorithm sortAlgorithm) {
+	//		this.sortAlgorithm = sortAlgorithm;
+	//	}
 
 	public int binarySearch(int[] numbers, int numbersToFind ) {
-//		BubbleSortAlgorithm bubbleSortAlgorithm = new BubbleSortAlgorithm();
-//		int[] sortedNumbers = bubbleSortAlgorithm.sort(numbers);
-		int[] sortedNumbers = sortAlgorithm.sort(numbers);
 		
+	//		BubbleSortAlgorithm bubbleSortAlgorithm = new BubbleSortAlgorithm();
+	//		int[] sortedNumbers = bubbleSortAlgorithm.sort(numbers);
+			
+		int[] sortedNumbers = sortAlgorithm.sort(numbers);		
 		System.out.println(sortedNumbers);
 		return 3;
 	}
+
+
 
 }
