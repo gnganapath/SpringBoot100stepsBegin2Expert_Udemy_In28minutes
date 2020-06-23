@@ -4,6 +4,7 @@
 </head>
 
 <body>
-   MY first JSP
+   MY first JSP!! Welcome ${name}  -express lang ('${variable}')
+
 </body>
 </html>
