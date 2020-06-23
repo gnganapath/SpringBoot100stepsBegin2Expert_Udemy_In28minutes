@@ -1,0 +1,7 @@
+Spring Boot starter Parent
+Spring Boot Starter Web
+@SpringBootApplication
+AutoConfiguration
+
+
+/login => "hello world"
