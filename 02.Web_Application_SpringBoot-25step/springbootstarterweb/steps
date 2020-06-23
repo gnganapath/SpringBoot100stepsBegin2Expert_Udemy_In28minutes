@@ -5,3 +5,11 @@ AutoConfiguration
 
 
 /login => "hello world"
+
+Dispatcher Servlet
+/login => "login"
+
+Search for a view named "login"
+src/main/webapp/WEB-INF/jsp/login.jsp
+
+"login" =>
