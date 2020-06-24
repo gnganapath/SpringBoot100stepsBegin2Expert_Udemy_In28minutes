@@ -2,6 +2,7 @@ package com.fullstackdev.sb.udemy28min.begin2expert.springbootstarterweb.Service
 import com.fullstackdev.sb.udemy28min.begin2expert.springbootstarterweb.model.Todo;
 import org.springframework.stereotype.Service;
 
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -23,14 +24,29 @@ public class TodoService {
     public List<Todo> retrieveTodos(String user) {
         List<Todo> filteredTodos = new ArrayList<Todo>();
         for (Todo todo : todos) {
-            if (todo.getUser().equals(user)) {
+            if (todo.getUser().equalsIgnoreCase(user)) {
                 filteredTodos.add(todo);
             }
         }
         return filteredTodos;
     }
 
-    public void addTodo(String name, String desc, Date targetDate,  boolean isDone) {
+    public Todo retrieveTodo(int id) {
+        for (Todo todo : todos) {
+            if (todo.getId()==id) {
+                return todo;
+            }
+        }
+        return null;
+    }
+
+    public void updateTodo(Todo todo){
+        todos.remove(todo);
+        todos.add(todo);
+    }
+
+    public void addTodo(String name, String desc, Date targetDate,
+                        boolean isDone) {
         todos.add(new Todo(++todoCount, name, desc, targetDate, isDone));
     }
 

@@ -2,15 +2,32 @@ package com.fullstackdev.sb.udemy28min.begin2expert.springbootstarterweb.model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+//import javax.validation.constraints.Size;
+
+@Entity
 public class Todo {
 
-    public int id;
-    public String user;
-    public String desc;
-    public Date targetDate;
-    public boolean isDone;
+    @Id
+    @GeneratedValue
+    private int id;
 
-    public Todo(int id, String user, String desc, Date targetDate,boolean isDone){
+    private String user;
+
+    //@Size(min=10, message="Enter at least 10 Characters...")
+    private String desc;
+
+    private Date targetDate;
+    private boolean isDone;
+
+    public Todo() {
+        super();
+    }
+
+    public Todo(int id, String user, String desc, Date targetDate,
+                boolean isDone) {
         super();
         this.id = id;
         this.user = user;
@@ -55,8 +72,34 @@ public class Todo {
         return isDone;
     }
 
-    public void setDone(boolean done) {
-        isDone = done;
+    public void setDone(boolean isDone) {
+        this.isDone = isDone;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + id;
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        Todo other = (Todo) obj;
+        if (id != other.id) {
+            return false;
+        }
+        return true;
     }
 
     @Override
@@ -67,3 +110,4 @@ public class Todo {
     }
 
 }
+

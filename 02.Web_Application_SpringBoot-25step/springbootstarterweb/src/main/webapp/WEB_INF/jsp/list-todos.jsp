@@ -1,38 +1,34 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<html>
+<%@ include file="common/header.jspf" %>
+<%@ include file="common/navigation.jspf" %>
 
-<head>
-    <title>First Web Application</title>
-</head>
-
-<body>
-
-<h1> your table</h1>
-<table>
-    <caption>your todos are</caption>
-    <thead>
-    <tr>
-        <th>Desc</th>
-        <th>Date</th>
-        <th>Done</th>
-    </tr>
-    </thead>
-    <tbody>
-    JSTL for Loop
-    <c:forEach items ="${todos}" var="item">
+<div class="container">
+    <table class="table table-striped">
+        <caption>Your todos are</caption>
+        <thead>
         <tr>
-            <td>${todo.desc}</td>
-            <td>${todo.targetdDate}</td>
-            <td>${todo.done}</td>
+            <th>Description</th>
+            <th>Target Date</th>
+            <th>Is it Done?</th>
+            <th></th>
+            <th></th>
         </tr>
-    </c:forEach>
-
-    </tbody>
-</table>
-Here are the list of ${name}'s todos:
-${todos}.
-<BR/>
-<a href="/add-todo">Add a Todo</a>
-</body>
-
-</html>
+        </thead>
+        <tbody>
+        <c:forEach items="${todos}" var="todo">
+            <tr>
+                <td>${todo.desc}</td>
+                <td><fmt:formatDate value="${todo.targetDate}" pattern="dd/MM/yyyy"/></td>
+                <td>${todo.done}</td>
+                <td><a type="button" class="btn btn-success"
+                       href="/update-todo?id=${todo.id}">Update</a></td>
+                <td><a type="button" class="btn btn-warning"
+                       href="/delete-todo?id=${todo.id}">Delete</a></td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+    <div>
+        <a class="button" href="/add-todo">Add a Todo</a>
+    </div>
+</div>
+<%@ include file="common/footer.jspf" %>
