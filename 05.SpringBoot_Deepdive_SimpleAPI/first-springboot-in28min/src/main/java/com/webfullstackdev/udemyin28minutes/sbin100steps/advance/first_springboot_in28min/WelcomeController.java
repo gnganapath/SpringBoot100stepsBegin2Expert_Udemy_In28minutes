@@ -51,6 +51,13 @@ public class WelcomeController {
 		return welService.BeanDIAutowired();
 	}
 	
+	@Autowired
+	WelcomeExtService externalService;
+	
+	@GetMapping("ext-service")
+	public String ExternalService() {
+		return externalService.ExternalService();
+	}
 }
 	
 
