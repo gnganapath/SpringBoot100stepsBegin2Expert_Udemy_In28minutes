@@ -14,7 +14,7 @@ public class WelcomeController {
 	
 	@GetMapping("")      // API end point - host:port/welcome
 	public String Wel() {
-		return "Welcome Controller Message- '/welcome' - empty";
+		return "Welcome Controller Message- '/welcome' - empty ";
 	}
 	
 	@GetMapping("/")      // API end point - host:port/welcome/
