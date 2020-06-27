@@ -34,11 +34,7 @@
                     <!--</exclusion>-->
                 <!--</exclusions>-->
 			</dependency>
-			<dependency>
-	            <groupId>org.springframework.boot</groupId>
-	            <artifactId>spring-boot-devtools</artifactId>
-	            <optional>true</optional>
-	        </dependency>
+
 	        <dependency>
 	            <groupId>com.fasterxml.jackson.dataformat</groupId>
 	            <artifactId>jackson-dataformat-xml</artifactId>
@@ -56,12 +52,12 @@
 			    <artifactId>spring-core</artifactId>
 			    <version>5.2.2.RELEASE</version>
 			</dependency>		
-		    <dependency>
-		      <groupId>junit</groupId>
-		      <artifactId>junit</artifactId>
-		      <version>3.8.1</version>
-		      <scope>test</scope>
-		    </dependency>
+		    <!--<dependency>-->
+		      <!--<groupId>junit</groupId>-->
+		      <!--<artifactId>junit</artifactId>-->
+		      <!--<version>5.3.2</version>-->
+		      <!--<scope>test</scope>-->
+		    <!--</dependency>-->
 
 			<dependency>
 				 <groupId>org.springframework.boot</groupId>
@@ -76,7 +72,31 @@
 				 <!--<artifactId>spring-boot-starter-data-rest</artifactId>-->
 			 <!--</dependency>-->
 
+
+			 <dependency>
+				 <groupId>org.springframework.boot</groupId>
+				 <artifactId>spring-boot-starter-actuator</artifactId>
+			 </dependency>
+
+			 <!--<dependency>-->
+				 <!--<groupId>org.springframework.boot</groupId>-->
+				 <!--<artifactId>spring-data-rest-hal-browser</artifactId>-->
+			 <!--</dependency>-->
+
+
+			 <dependency>
+				 <groupId>org.springframework.boot</groupId>
+				 <artifactId>spring-boot-devtools</artifactId>
+				 <optional>true</optional>
+			 </dependency>
+
+			 <dependency>
+				 <groupId>org.springframework.boot</groupId>
+				 <artifactId>spring-boot-starter-test</artifactId>
+				 <scope>test</scope>
+			 </dependency>
 	  </dependencies>
+
 	  
 	  <build>
     <plugins>
