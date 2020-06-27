@@ -7,6 +7,7 @@ basic:
   value: true
   message: "Welcome to configuration at  default"
   number:  99
+
 dev:
   basic:
     value: true
