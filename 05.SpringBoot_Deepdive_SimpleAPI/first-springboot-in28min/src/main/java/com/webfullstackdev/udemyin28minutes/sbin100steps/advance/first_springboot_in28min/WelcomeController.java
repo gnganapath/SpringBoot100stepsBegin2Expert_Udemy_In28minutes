@@ -58,6 +58,14 @@ public class WelcomeController {
 	public String ExternalService() {
 		return externalService.ExternalService();
 	}
+
+	@GetMapping("/property-value")
+	public String PropertyMesssage() { return externalService.ProperRef();  } //
+	// application.property and application.yml aboth have welcome.message. But the priority is property if incase both will have in project
+
+	@GetMapping("/yaml-value")
+	public String YamlMessage() { return externalService.YamlRef(); }
+
 }
 	
 

@@ -25,7 +25,14 @@
 		  <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
 			<dependency>
 			    <groupId>org.springframework.boot</groupId>
-			    <artifactId>spring-boot-starter-web</artifactId>	   
+			    <artifactId>spring-boot-starter-web</artifactId>
+				<!-- Specifically disable Tomcat for externally install the Jetty server instead -->
+                <!--<exclusions>-->
+                    <!--<exclusion>-->
+                        <!--<groupId>org.springframework.boot</groupId>-->
+                        <!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
+                    <!--</exclusion>-->
+                <!--</exclusions>-->
 			</dependency>
 			<dependency>
 	            <groupId>org.springframework.boot</groupId>
@@ -36,8 +43,11 @@
 	            <groupId>com.fasterxml.jackson.dataformat</groupId>
 	            <artifactId>jackson-dataformat-xml</artifactId>
         	</dependency>
-
-
+             <!-- externally install the Jetty server instead of Tomcat -->
+             <!--<dependency>-->
+                 <!--<groupId>org.springframework.boot</groupId>-->
+                 <!--<artifactId>spring-boot-starter-jetty</artifactId>-->
+             <!--</dependency>-->
 	        
 	          
 		  <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
