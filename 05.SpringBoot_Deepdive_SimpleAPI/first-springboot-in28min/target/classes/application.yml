@@ -3,3 +3,18 @@ welcome:
 yaml:
   yamlmessage: "welcomt to yaml"
 
+basic:
+  value: true
+  message: "Welcome to configuration at  default"
+  number:  99
+dev:
+  basic:
+    value: true
+    message: "Welcome to configuration at dev "
+    number:  99
+
+prod:
+  basic:
+    value: true
+    message: "Welcome to configuration at prod "
+    number:  99
